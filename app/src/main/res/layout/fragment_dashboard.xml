@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.dashboard.DashboardFragment">
+
+    <TextView
+        android:id="@+id/top_banner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#008000"
+        android:gravity="center"
+        android:padding="16dp"
+        android:text="ON THE WAY TO PU"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Car and Info Section -->
+
+    <TextView
+        android:id="@+id/car_info"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:text="Car (4-seater)"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top_banner"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/ride_time"
+        android:layout_width="276dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="16dp"
+        android:padding="4dp"
+        android:background="@drawable/rounded_textview"
+        android:text="Monday 16 (TODAY) 5:53PM"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/car_info" />
+
+    <!-- Contact Section -->
+
+    <!-- Pickup and Dropoff Locations -->
+
+    <TextView
+        android:id="@+id/car_plate"
+        android:layout_width="255dp"
+        android:layout_height="28dp"
+        android:padding="4dp"
+        android:background="@drawable/rounded_textview"
+        android:text="Hcar #66620847362891647"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.197" />
+
+    <!-- Driver's Earning -->
+
+    <LinearLayout
+        android:id="@+id/contact_section"
+        android:layout_width="369dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/rounded_textview"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/car_plate">
+
+        <TextView
+            android:id="@+id/contact_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#FFFFFF"
+            android:text="Contact Name: Ayan Torreda"
+            android:textColor="#000000"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/contact_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:contentDescription="Call Icon"
+            android:src="@drawable/ic_call" />
+
+        <ImageView
+            android:id="@+id/message_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="8dp"
+            android:contentDescription="Message Icon"
+            android:src="@drawable/ic_messages" />
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="380dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="36dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/contact_section">
+
+        <!-- Pickup Location -->
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/contact_section">
+
+            <!-- Pickup Location -->
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="376dp"
+                android:layout_height="44dp"
+                android:layout_marginTop="36dp"
+                android:background="@drawable/rounded_textview"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/contact_section">
+
+                <!-- Pickup Location -->
+
+                <ImageView
+                    android:id="@+id/pickup_icon"
+                    android:layout_width="38dp"
+                    android:layout_height="33dp"
+                    android:contentDescription="Pickup Icon"
+                    android:src="@drawable/ic_location"
+                    app:layout_marginEnd="8dp"
+                    tools:layout_editor_absoluteX="324dp"
+                    tools:layout_editor_absoluteY="10dp" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/pickup_location"
+            android:layout_width="327dp"
+            android:layout_height="60dp"
+            android:drawablePadding="8dp"
+            android:padding="8dp"
+            android:background="@drawable/rounded_textview"
+            android:text="FR: 800 KM Marikina - Infanta, Antipolo, 1870, Metro Manila, Philippines"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pickup_location_container">
+
+        <!-- Dropoff Location -->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <TextView
+        android:id="@+id/driver_earning_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:background="#D3D3D3"
+        android:padding="8dp"
+        android:text="DRIVER'S EARNING"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dropoff_location" />
+
+    <TextView
+        android:id="@+id/cash_to_collect"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:text="CASH TO COLLECT: PHP 431.00"
+        android:textColor="#FF0000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/driver_earning_label" />
+
+    <!-- Buttons -->
+
+    <Button
+        android:id="@+id/btn_arrived"
+        android:layout_width="350dp"
+        android:layout_height="45dp"
+        android:layout_weight="1"
+        android:backgroundTint="#00FF00"
+        android:text="Arrived at Pickup"
+        android:textColor="#FFFFFF"
+        tools:layout_editor_absoluteX="30dp"
+        tools:layout_editor_absoluteY="571dp" />
+
+    <Button
+        android:id="@+id/btn_cancel"
+        android:layout_width="353dp"
+        android:layout_height="45dp"
+        android:layout_weight="1"
+        android:backgroundTint="#FF0000"
+        android:text="Cancel Booking"
+        android:textColor="#FFFFFF"
+        tools:layout_editor_absoluteX="31dp"
+        tools:layout_editor_absoluteY="619dp" />
+
+    <ImageView
+        android:id="@+id/dropoff_icon"
+        android:layout_width="31dp"
+        android:layout_height="49dp"
+        android:contentDescription="Dropoff Icon"
+        android:src="@drawable/ic_location"
+        app:layout_marginEnd="8dp"
+        tools:layout_editor_absoluteX="353dp"
+        tools:layout_editor_absoluteY="380dp" />
+
+    <TextView
+        android:id="@+id/dropoff_location"
+        android:layout_width="335dp"
+        android:layout_height="52dp"
+        android:drawablePadding="8dp"
+        android:padding="8dp"
+        android:background="#D3D3D3"
+        android:text="TO: Antipolo City Hall, M. Santos Street, Antipolo, Rizal, Philippines"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="380dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

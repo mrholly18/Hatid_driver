@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeFragment">
+
+    <!-- Top Banner -->
+    <LinearLayout
+        android:id="@+id/top_banner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#FFD700"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/incoming_booking"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Incoming Booking"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/timer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ends in 54 secs"
+            android:textColor="#FF0000"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- Car and Info Section -->
+    <TextView
+        android:id="@+id/car_info"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Car (4-seater)"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:padding="8dp"
+        app:layout_constraintTop_toBottomOf="@id/top_banner"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/ride_details"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Monday 16 (TODAY) 5:53PM\nHcar #66620847362891647\n0.0 KM away from you"
+        android:textSize="14sp"
+        android:padding="8dp"
+        app:layout_constraintTop_toBottomOf="@id/car_info"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Pickup and Dropoff Locations -->
+    <TextView
+        android:id="@+id/pickup_location"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="FR: 800 KM Marikina - Infanta, Antipolo, 1870, Metro Manila, Philippines"
+        android:textSize="14sp"
+        android:drawablePadding="8dp"
+        android:padding="8dp"
+        app:layout_constraintTop_toBottomOf="@id/ride_details"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/dropoff_location"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="TO: Antipolo City Hall, M. Santos Street, Antipolo, Rizal, Philippines"
+        android:textSize="14sp"
+        android:drawablePadding="8dp"
+        android:padding="8dp"
+        app:layout_constraintTop_toBottomOf="@id/pickup_location"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Driver's Earning Section -->
+    <LinearLayout
+        android:id="@+id/drivers_earning_section"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#F2F2F2"
+        android:padding="8dp"
+        app:layout_constraintTop_toBottomOf="@id/dropoff_location"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/driver_earning_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DRIVER'S EARNING"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:padding="8dp" />
+
+        <TextView
+            android:id="@+id/cash_to_collect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CASH TO COLLECT: PHP 431.00"
+            android:textSize="16sp"
+            android:textColor="#FF0000"
+            android:textStyle="bold"
+            android:padding="8dp" />
+    </LinearLayout>
+
+    <!-- Action Buttons -->
+    <LinearLayout
+        android:id="@+id/action_buttons"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/drivers_earning_section"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <Button
+            android:id="@+id/btn_reject"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#FF0000"
+            android:text="REJECT"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:layout_marginEnd="8dp" />
+
+        <Button
+            android:id="@+id/btn_accept"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#00FF00"
+            android:text="ACCEPT"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
